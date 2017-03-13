@@ -1,8 +1,8 @@
 FactoryGirl.define do
   factory :item do
-    name "MyString"
-    description "MyString"
+    name "ItemName"
+    description "ItemDescription"
     unit_price 1.5
-    merhant nil
+    merchant Merchant.create()
   end
 end
