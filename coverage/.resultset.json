@@ -6,6 +6,10 @@
         null,
         1,
         1,
+        1,
+        null,
+        1,
+        null,
         null
       ],
       "/Users/wonderland/Turing/3module/Projects/Rails_Engine/rails_engine/spec/rails_helper.rb": [
@@ -275,6 +279,38 @@
         null,
         null
       ],
+      "/Users/wonderland/Turing/3module/Projects/Rails_Engine/rails_engine/app/models/item.rb": [
+        1,
+        1,
+        1,
+        1,
+        null
+      ],
+      "/Users/wonderland/Turing/3module/Projects/Rails_Engine/rails_engine/app/models/application_record.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/wonderland/Turing/3module/Projects/Rails_Engine/rails_engine/app/models/merchant.rb": [
+        1,
+        1,
+        1,
+        null
+      ],
+      "/Users/wonderland/Turing/3module/Projects/Rails_Engine/rails_engine/app/models/invoice.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null
+      ],
+      "/Users/wonderland/Turing/3module/Projects/Rails_Engine/rails_engine/app/models/customer.rb": [
+        1,
+        1,
+        null
+      ],
       "/Users/wonderland/Turing/3module/Projects/Rails_Engine/rails_engine/spec/factories/invoices.rb": [
         1,
         1,
@@ -319,19 +355,11 @@
         1,
         null,
         null,
+        null,
+        null,
         null
       ],
       "/Users/wonderland/Turing/3module/Projects/Rails_Engine/rails_engine/spec/support/factory_girl.rb": [
-        1,
-        1,
-        null
-      ],
-      "/Users/wonderland/Turing/3module/Projects/Rails_Engine/rails_engine/app/models/customer.rb": [
-        1,
-        1,
-        null
-      ],
-      "/Users/wonderland/Turing/3module/Projects/Rails_Engine/rails_engine/app/models/application_record.rb": [
         1,
         1,
         null
@@ -341,6 +369,18 @@
         null,
         1,
         1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
         null
       ],
       "/Users/wonderland/Turing/3module/Projects/Rails_Engine/rails_engine/app/models/invoice_item.rb": [
@@ -354,15 +394,30 @@
         null,
         1,
         1,
-        null
-      ],
-      "/Users/wonderland/Turing/3module/Projects/Rails_Engine/rails_engine/app/models/invoice.rb": [
         1,
         1,
+        null,
+        1,
+        null,
+        null,
         1,
         1,
+        null,
+        1,
+        null,
+        null,
         1,
         1,
+        null,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
         null
       ],
       "/Users/wonderland/Turing/3module/Projects/Rails_Engine/rails_engine/spec/models/item_spec.rb": [
@@ -370,13 +425,24 @@
         null,
         1,
         1,
-        null
-      ],
-      "/Users/wonderland/Turing/3module/Projects/Rails_Engine/rails_engine/app/models/item.rb": [
         1,
         1,
+        null,
+        1,
+        null,
+        null,
         1,
         1,
+        null,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
         null
       ],
       "/Users/wonderland/Turing/3module/Projects/Rails_Engine/rails_engine/spec/models/merchant_spec.rb": [
@@ -396,17 +462,15 @@
         null,
         null
       ],
-      "/Users/wonderland/Turing/3module/Projects/Rails_Engine/rails_engine/app/models/merchant.rb": [
-        1,
-        1,
-        1,
-        null
-      ],
       "/Users/wonderland/Turing/3module/Projects/Rails_Engine/rails_engine/spec/models/transaction_spec.rb": [
         1,
         null,
         1,
         1,
+        1,
+        null,
+        1,
+        null,
         null
       ],
       "/Users/wonderland/Turing/3module/Projects/Rails_Engine/rails_engine/app/models/transaction.rb": [
@@ -433,8 +497,8 @@
         null,
         null,
         1,
-        1,
-        1,
+        0,
+        0,
         null,
         0,
         null,
@@ -447,7 +511,7 @@
         null,
         null,
         1,
-        2,
+        1,
         null,
         null
       ],
@@ -456,6 +520,6 @@
         null
       ]
     },
-    "timestamp": 1489449636
+    "timestamp": 1489450551
   }
 }
