@@ -1,5 +1,15 @@
 require 'rails_helper'
 
 RSpec.describe Merchant, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it "has many items" do
+    merchant = create(:merchant)
+
+    expect(merchant).to respond_to(:items)
+  end
+
+  it "has many invoices" do
+    merchant = create(:merchant)
+
+    expect(merchant).to respond_to(:invoices)
+  end
 end
