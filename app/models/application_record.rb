@@ -24,6 +24,4 @@ class ApplicationRecord < ActiveRecord::Base
       end
       params
     end
-
-
 end
