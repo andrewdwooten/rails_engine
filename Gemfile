@@ -26,10 +26,13 @@ gem 'puma', '~> 3.0'
 # gem 'rack-cors'
 gem 'rspec-rails'
 
+gem 'factory_girl_rails'
+gem 'pry'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
-  gem 'factory_girl_rails',"~> 4.0", :require => false
+  #gem 'factory_girl_rails',"~> 4.0", :require => false
 end
 gem 'simplecov', :require => false, :group => :test
 
