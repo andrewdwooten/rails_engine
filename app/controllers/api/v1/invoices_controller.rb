@@ -12,6 +12,10 @@ class Api::V1::InvoicesController < ApplicationController
     render json: Invoice.search(search_params)
   end
 
+  def random
+    render json: Invoice.random
+  end
+
 private
   def search_params
     params.permit(:id,
