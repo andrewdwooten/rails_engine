@@ -20,3 +20,9 @@ STATUS = ["Ordered", "Shipped", "Paid", "Cancelled"]
                    merchant_id: Faker::Number.between(1, 4843),
                    status: STATUS.sample)
   end
+  2483.times do
+    Item.create(name: Faker::Name.first_name,
+                description: Faker::Name.first_name,
+                unit_price: Faker::Number.between(1, 20),
+                merchant_id: Faker::Number.between(1, 4843))
+  end
