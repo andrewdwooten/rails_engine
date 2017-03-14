@@ -11,9 +11,13 @@ class Api::V1::MerchantsController < ApplicationController
     render json: Merchant.search(search_params)
   end
 
-  # def find_all
-  #   render json: Merchant.where(search_params)
-  # end
+  def find_all
+    render json: Merchant.search_all(search_params)
+  end
+
+  def random
+    render json: Merchant.find_random
+  end
 
   private
 
