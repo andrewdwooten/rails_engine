@@ -5,6 +5,10 @@ class ApplicationRecord < ActiveRecord::Base
       find_by(filter(params))
     end
 
+    def self.find_all(params)
+      where(filter(params))
+    end
+
     def self.filter(params)
       case
         when params[:status]
