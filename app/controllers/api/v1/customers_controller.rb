@@ -12,6 +12,15 @@ class Api::V1::CustomersController < ApplicationController
     render json: Customer.search(search_params)
   end
 
+  def find_all
+    
+    render json: Customer.search_all(search_params)
+  end
+
+  def random
+    render json: Customer.find_random
+  end
+
   private
 
   def search_params

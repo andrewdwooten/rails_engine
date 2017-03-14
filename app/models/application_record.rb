@@ -17,6 +17,10 @@ class ApplicationRecord < ActiveRecord::Base
     case
       when params[:name]
         params[:name] = params[:name].downcase.capitalize
+      when params[:first_name]
+        params[:first_name] = params[:first_name].downcase.capitalize
+      when params[:last_name]
+        params[:last_name] = params[:last_name].downcase.capitalize
       when params[:status]
         params[:status] = params[:status].downcase.capitalize
       when params[:created_at]
