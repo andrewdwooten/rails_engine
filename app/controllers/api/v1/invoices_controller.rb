@@ -13,11 +13,11 @@ class Api::V1::InvoicesController < ApplicationController
   end
 
   def find_all
-    render json: Invoice.find_all(search_params)
+    render json: Invoice.search_all(search_params)
   end
 
   def random
-    render json: Invoice.random
+    render json: Invoice.find_random
   end
 
 private

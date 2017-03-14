@@ -5,8 +5,12 @@ class ApplicationRecord < ActiveRecord::Base
       find_by(filter(params))
     end
 
-    def self.find_all(params)
+    def self.search_all(params)
       where(filter(params))
+    end
+
+    def self.find_random
+      order("Random()").limit(1)
     end
 
     def self.filter(params)
@@ -20,10 +24,4 @@ class ApplicationRecord < ActiveRecord::Base
       end
       params
     end
-
-    def self.random
-      order("Random()").limit(1)
-    end
-
-
 end
