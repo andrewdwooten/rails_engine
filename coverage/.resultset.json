@@ -1,81 +1,85 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/andrewwooten/Desktop/Turing/Module_3/Projects/rails_engine/spec/models/customer_spec.rb": [
-        1,
-        null,
-        1,
-        1,
-        null
-      ],
-      "/Users/andrewwooten/Desktop/Turing/Module_3/Projects/rails_engine/spec/rails_helper.rb": [
-        null,
-        1,
+      "/Users/wonderland/Turing/3module/Projects/Rails_Engine/rails_engine/spec/models/customer_spec.rb": [
         1,
         null,
         1,
         1,
         1,
-        1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
         null,
         1,
-        null,
-        1,
-        null,
-        1,
-        null,
-        null,
-        null,
-        null,
-        1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
-        null,
-        null,
-        1,
-        null,
         null,
         null
       ],
-      "/Users/andrewwooten/Desktop/Turing/Module_3/Projects/rails_engine/config/environment.rb": [
+      "/Users/wonderland/Turing/3module/Projects/Rails_Engine/rails_engine/spec/rails_helper.rb": [
+        null,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/wonderland/Turing/3module/Projects/Rails_Engine/rails_engine/config/environment.rb": [
         null,
         1,
         null,
         null,
         1
       ],
-      "/Users/andrewwooten/Desktop/Turing/Module_3/Projects/rails_engine/config/application.rb": [
+      "/Users/wonderland/Turing/3module/Projects/Rails_Engine/rails_engine/config/application.rb": [
         1,
         null,
         1,
@@ -107,12 +111,12 @@
         null,
         null
       ],
-      "/Users/andrewwooten/Desktop/Turing/Module_3/Projects/rails_engine/config/boot.rb": [
+      "/Users/wonderland/Turing/3module/Projects/Rails_Engine/rails_engine/config/boot.rb": [
         1,
         null,
         1
       ],
-      "/Users/andrewwooten/Desktop/Turing/Module_3/Projects/rails_engine/config/environments/test.rb": [
+      "/Users/wonderland/Turing/3module/Projects/Rails_Engine/rails_engine/config/environments/test.rb": [
         1,
         null,
         null,
@@ -156,7 +160,7 @@
         null,
         null
       ],
-      "/Users/andrewwooten/Desktop/Turing/Module_3/Projects/rails_engine/config/initializers/application_controller_renderer.rb": [
+      "/Users/wonderland/Turing/3module/Projects/Rails_Engine/rails_engine/config/initializers/application_controller_renderer.rb": [
         null,
         null,
         null,
@@ -164,25 +168,7 @@
         null,
         null
       ],
-      "/Users/andrewwooten/Desktop/Turing/Module_3/Projects/rails_engine/config/initializers/backtrace_silencers.rb": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      "/Users/andrewwooten/Desktop/Turing/Module_3/Projects/rails_engine/config/initializers/cors.rb": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
+      "/Users/wonderland/Turing/3module/Projects/Rails_Engine/rails_engine/config/initializers/backtrace_silencers.rb": [
         null,
         null,
         null,
@@ -191,13 +177,31 @@
         null,
         null
       ],
-      "/Users/andrewwooten/Desktop/Turing/Module_3/Projects/rails_engine/config/initializers/filter_parameter_logging.rb": [
+      "/Users/wonderland/Turing/3module/Projects/Rails_Engine/rails_engine/config/initializers/cors.rb": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/wonderland/Turing/3module/Projects/Rails_Engine/rails_engine/config/initializers/filter_parameter_logging.rb": [
         null,
         null,
         null,
         1
       ],
-      "/Users/andrewwooten/Desktop/Turing/Module_3/Projects/rails_engine/config/initializers/inflections.rb": [
+      "/Users/wonderland/Turing/3module/Projects/Rails_Engine/rails_engine/config/initializers/inflections.rb": [
         null,
         null,
         null,
@@ -215,13 +219,13 @@
         null,
         null
       ],
-      "/Users/andrewwooten/Desktop/Turing/Module_3/Projects/rails_engine/config/initializers/mime_types.rb": [
+      "/Users/wonderland/Turing/3module/Projects/Rails_Engine/rails_engine/config/initializers/mime_types.rb": [
         null,
         null,
         null,
         null
       ],
-      "/Users/andrewwooten/Desktop/Turing/Module_3/Projects/rails_engine/config/initializers/new_framework_defaults.rb": [
+      "/Users/wonderland/Turing/3module/Projects/Rails_Engine/rails_engine/config/initializers/new_framework_defaults.rb": [
         null,
         null,
         null,
@@ -241,7 +245,7 @@
         null,
         1
       ],
-      "/Users/andrewwooten/Desktop/Turing/Module_3/Projects/rails_engine/config/initializers/wrap_parameters.rb": [
+      "/Users/wonderland/Turing/3module/Projects/Rails_Engine/rails_engine/config/initializers/wrap_parameters.rb": [
         null,
         null,
         null,
@@ -249,7 +253,7 @@
         null,
         null,
         1,
-        1,
+        2,
         null,
         null,
         null,
@@ -257,7 +261,7 @@
         null,
         null
       ],
-      "/Users/andrewwooten/Desktop/Turing/Module_3/Projects/rails_engine/spec/factories/customers.rb": [
+      "/Users/wonderland/Turing/3module/Projects/Rails_Engine/rails_engine/spec/factories/customers.rb": [
         1,
         1,
         1,
@@ -265,26 +269,7 @@
         null,
         null
       ],
-      "/Users/andrewwooten/Desktop/Turing/Module_3/Projects/rails_engine/spec/factories/invoice_items.rb": [
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null
-      ],
-      "/Users/andrewwooten/Desktop/Turing/Module_3/Projects/rails_engine/spec/factories/invoices.rb": [
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null
-      ],
-      "/Users/andrewwooten/Desktop/Turing/Module_3/Projects/rails_engine/spec/factories/items.rb": [
+      "/Users/wonderland/Turing/3module/Projects/Rails_Engine/rails_engine/spec/factories/invoice_items.rb": [
         1,
         1,
         1,
@@ -294,14 +279,48 @@
         null,
         null
       ],
-      "/Users/andrewwooten/Desktop/Turing/Module_3/Projects/rails_engine/spec/factories/merchants.rb": [
+      "/Users/wonderland/Turing/3module/Projects/Rails_Engine/rails_engine/app/models/item.rb": [
+        1,
+        1,
+        1,
+        1,
+        null
+      ],
+      "/Users/wonderland/Turing/3module/Projects/Rails_Engine/rails_engine/app/models/application_record.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/wonderland/Turing/3module/Projects/Rails_Engine/rails_engine/app/models/merchant.rb": [
+        1,
+        1,
+        1,
+        null
+      ],
+      "/Users/wonderland/Turing/3module/Projects/Rails_Engine/rails_engine/app/models/invoice.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null
+      ],
+      "/Users/wonderland/Turing/3module/Projects/Rails_Engine/rails_engine/app/models/customer.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/wonderland/Turing/3module/Projects/Rails_Engine/rails_engine/spec/factories/invoices.rb": [
+        1,
+        1,
         1,
         1,
         1,
         null,
         null
       ],
-      "/Users/andrewwooten/Desktop/Turing/Module_3/Projects/rails_engine/spec/factories/transactions.rb": [
+      "/Users/wonderland/Turing/3module/Projects/Rails_Engine/rails_engine/spec/factories/items.rb": [
         1,
         1,
         1,
@@ -311,95 +330,196 @@
         null,
         null
       ],
-      "/Users/andrewwooten/Desktop/Turing/Module_3/Projects/rails_engine/config/routes.rb": [
+      "/Users/wonderland/Turing/3module/Projects/Rails_Engine/rails_engine/spec/factories/merchants.rb": [
+        1,
+        1,
         1,
         null,
         null
       ],
-      "/Users/andrewwooten/Desktop/Turing/Module_3/Projects/rails_engine/spec/support/factory_girl.rb": [
+      "/Users/wonderland/Turing/3module/Projects/Rails_Engine/rails_engine/spec/factories/transactions.rb": [
         1,
         1,
+        1,
+        1,
+        1,
+        1,
+        null,
         null
       ],
-      "/Users/andrewwooten/Desktop/Turing/Module_3/Projects/rails_engine/app/models/customer.rb": [
-        1,
-        1,
-        null
-      ],
-      "/Users/andrewwooten/Desktop/Turing/Module_3/Projects/rails_engine/app/models/application_record.rb": [
-        1,
-        1,
-        null
-      ],
-      "/Users/andrewwooten/Desktop/Turing/Module_3/Projects/rails_engine/spec/models/invoice_item_spec.rb": [
+      "/Users/wonderland/Turing/3module/Projects/Rails_Engine/rails_engine/config/routes.rb": [
         1,
         null,
         1,
         1,
+        1,
+        null,
+        null,
+        null,
+        null,
         null
       ],
-      "/Users/andrewwooten/Desktop/Turing/Module_3/Projects/rails_engine/app/models/invoice_item.rb": [
-        1,
+      "/Users/wonderland/Turing/3module/Projects/Rails_Engine/rails_engine/spec/support/factory_girl.rb": [
         1,
         1,
         null
       ],
-      "/Users/andrewwooten/Desktop/Turing/Module_3/Projects/rails_engine/spec/models/invoice_spec.rb": [
+      "/Users/wonderland/Turing/3module/Projects/Rails_Engine/rails_engine/spec/models/invoice_item_spec.rb": [
         1,
         null,
         1,
         1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
         null
       ],
-      "/Users/andrewwooten/Desktop/Turing/Module_3/Projects/rails_engine/app/models/invoice.rb": [
-        1,
-        1,
-        1,
+      "/Users/wonderland/Turing/3module/Projects/Rails_Engine/rails_engine/app/models/invoice_item.rb": [
         1,
         1,
         1,
         null
       ],
-      "/Users/andrewwooten/Desktop/Turing/Module_3/Projects/rails_engine/spec/models/item_spec.rb": [
+      "/Users/wonderland/Turing/3module/Projects/Rails_Engine/rails_engine/spec/models/invoice_spec.rb": [
         1,
         null,
         1,
         1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
         null
       ],
-      "/Users/andrewwooten/Desktop/Turing/Module_3/Projects/rails_engine/app/models/item.rb": [
-        1,
-        1,
-        1,
-        1,
-        null
-      ],
-      "/Users/andrewwooten/Desktop/Turing/Module_3/Projects/rails_engine/spec/models/merchant_spec.rb": [
+      "/Users/wonderland/Turing/3module/Projects/Rails_Engine/rails_engine/spec/models/item_spec.rb": [
         1,
         null,
         1,
         1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
         null
       ],
-      "/Users/andrewwooten/Desktop/Turing/Module_3/Projects/rails_engine/app/models/merchant.rb": [
-        1,
-        1,
-        1,
-        null
-      ],
-      "/Users/andrewwooten/Desktop/Turing/Module_3/Projects/rails_engine/spec/models/transaction_spec.rb": [
+      "/Users/wonderland/Turing/3module/Projects/Rails_Engine/rails_engine/spec/models/merchant_spec.rb": [
         1,
         null,
         1,
         1,
+        1,
+        null,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        1,
+        null,
         null
       ],
-      "/Users/andrewwooten/Desktop/Turing/Module_3/Projects/rails_engine/app/models/transaction.rb": [
+      "/Users/wonderland/Turing/3module/Projects/Rails_Engine/rails_engine/spec/models/transaction_spec.rb": [
         1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null
+      ],
+      "/Users/wonderland/Turing/3module/Projects/Rails_Engine/rails_engine/app/models/transaction.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/wonderland/Turing/3module/Projects/Rails_Engine/rails_engine/spec/requests/api/v1/merchant_request_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
+        1,
+        0,
+        0,
+        null,
+        0,
+        null,
+        null
+      ],
+      "/Users/wonderland/Turing/3module/Projects/Rails_Engine/rails_engine/app/controllers/api/v1/merchants_controller.rb": [
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/wonderland/Turing/3module/Projects/Rails_Engine/rails_engine/app/controllers/application_controller.rb": [
         1,
         null
       ]
     },
-    "timestamp": 1489443581
+    "timestamp": 1489450551
   }
 }

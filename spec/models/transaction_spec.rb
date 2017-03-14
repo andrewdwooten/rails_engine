@@ -1,5 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe Transaction, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it "belongs to invoice" do
+    trans = create(:transaction)
+
+    expect(trans).to respond_to(:invoice)
+  end
 end
