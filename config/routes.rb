@@ -17,8 +17,11 @@ Rails.application.routes.draw do
 
       #customers
       get "/customers/find" => "customers#find"
+      get "/customers/find_all" => "customers#find_all"
+      get "/customers/random" => "customers#random"
       resources :customers, only: [:index, :show]
 
+      #items
       get "/items/find" => "items#find"
       get "/items/find_all" => "items#find_all"
       get "items/random" => "items#random"

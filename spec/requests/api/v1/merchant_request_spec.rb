@@ -15,7 +15,7 @@ describe "Merchant API" do
     expect(response).to be_success
   end
 
-  xit "finds a merchant from parameters" do
+  it "finds a merchant from parameters" do
     merchant = create(:merchant)
     get "/api/v1/merchants/find?id=#{merchant.id}"
     thing = JSON.parse(response.body)
@@ -61,7 +61,7 @@ describe "Merchant API" do
 
     expect(response).to be_success
     expect(thing[0]["id"]).to eq(merchant.id)
-    expect(thing[1]["id"]).to eq(other_merchant.id)  #probably both not going to be id
+    expect(thing[1]["id"]).to eq(other_merchant.id)
   end
 
   it "finds all matches when given created_at" do
@@ -77,7 +77,7 @@ describe "Merchant API" do
 
     expect(response).to be_success
     expect(thing[0]["created_at"]).to eq(merchant.created_at.as_json)
-    expect(thing[1]["created_at"]).to eq(other_merchant.created_at.as_json) # here too
+    expect(thing[1]["created_at"]).to eq(other_merchant.created_at.as_json)
   end
 
   it "finds all matches when given name and created_at" do
