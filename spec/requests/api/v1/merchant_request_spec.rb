@@ -30,7 +30,7 @@ describe "Merchant API" do
     thing = JSON.parse(response.body)
 
     expect(response).to be_success
-    expect(thing["name"]).to eq(merchant.name)
+    expect(thing["id"]).to eq(merchant.id)
   end
 
   it "finds a merchant by created at" do
@@ -40,7 +40,7 @@ describe "Merchant API" do
     thing = JSON.parse(response.body)
 
     expect(response).to be_success
-    expect(thing["created_at"]).to eq(merchant.created_at.as_json)
+    expect(thing["id"]).to eq(merchant.id.as_json)
   end
 
   it "finds a merchant by updated at" do
@@ -50,7 +50,7 @@ describe "Merchant API" do
     thing = JSON.parse(response.body)
 
     expect(response).to be_success
-    expect(thing["updated_at"]).to eq(merchant.updated_at.as_json)
+    expect(thing["id"]).to eq(merchant.id)
   end
 
   it "finds all matches when given name" do
@@ -76,8 +76,8 @@ describe "Merchant API" do
     thing = JSON.parse(response.body)
 
     expect(response).to be_success
-    expect(thing[0]["created_at"]).to eq(merchant.created_at.as_json)
-    expect(thing[1]["created_at"]).to eq(other_merchant.created_at.as_json)
+    expect(thing[0]["id"]).to eq(merchant.id)
+    expect(thing[1]["id"]).to eq(other_merchant.id)
   end
 
   it "finds all matches when given name and created_at" do
@@ -91,8 +91,8 @@ describe "Merchant API" do
     thing = JSON.parse(response.body)
 
     expect(response).to be_success
-    expect(thing[0]["updated_at"]).to eq(merchant.updated_at.as_json)
-    expect(thing[1]["updated_at"]).to eq(other_merchant.updated_at.as_json) # here too
+    expect(thing[0]["id"]).to eq(merchant.id)
+    expect(thing[1]["id"]).to eq(other_merchant.id) # here too
   end
 
   it "returns a random resource for merchant" do

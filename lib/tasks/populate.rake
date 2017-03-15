@@ -9,6 +9,7 @@ require './app/models/transaction.rb'
 require 'rake'
 
 
+
 task :populate => :environment do
   customer_file = './db/csv/customers.csv'
   customers = File.read(customer_file)
@@ -86,7 +87,7 @@ task :populate => :environment do
   end
 
   puts "Populated #{InvoiceItem.count} InvoiceItems to database"
-  transaction_file = './db/csv/invoices.csv'
+  transaction_file = './db/csv/transactions.csv'
   transactions = File.read(transaction_file)
   transactions_cell = CSV.parse(transactions, headers: true)
   transactions_cell.each do |row|

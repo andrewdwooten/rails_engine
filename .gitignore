@@ -18,5 +18,3 @@
 
 # Ignore SimpleCov Files
   /coverage/*
-
-  /db/csv/*
