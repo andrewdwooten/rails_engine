@@ -1,7 +1,7 @@
 FactoryGirl.define do
   factory :invoice do
-    customer Customer.create()
-    merchant Merchant.create()
+    customer
+    merchant 
     status "Teststatus"
   end
 end
