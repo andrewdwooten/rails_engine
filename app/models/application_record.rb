@@ -15,7 +15,7 @@ class ApplicationRecord < ActiveRecord::Base
 
   def self.filter(params)
     case
-      when params[:name]
+      when self.name != 'Merchant' && params[:name]
         params[:name] = params[:name].downcase.split.map(&:capitalize).join(' ')
       when params[:first_name]
         params[:first_name] = params[:first_name].downcase.capitalize
