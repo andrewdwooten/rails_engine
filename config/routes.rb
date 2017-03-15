@@ -16,10 +16,10 @@ Rails.application.routes.draw do
       get "/invoices/find_all" => "invoices#find_all"
       resources :invoices, only: [:index, :show]
       get "/invoices/:id/transactions" => "invoices#invoice_transactions"
-      get "/invoices/:id/invoice_items" => "invoices#invoice_items"
-      get "/invoices/:id/items" => "invoices#invoice_items" #here
-      get "/invoices/:id/customer" => "invoices#customer"
-      get "/invoices/:id/merchant" => "invoices#merchant"
+      get "/invoices/:id/invoice_items" => "invoices#find_invoice_items"
+      get "/invoices/:id/items" => "invoices#find_items" #here
+      get "/invoices/:id/customer" => "invoices#find_customers"
+      get "/invoices/:id/merchant" => "invoices#find_merchants"
 
       #customers
       get "/customers/find" => "customers#find"
@@ -30,8 +30,10 @@ Rails.application.routes.draw do
       #items
       get "/items/find" => "items#find"
       get "/items/find_all" => "items#find_all"
-      get "items/random" => "items#random"
+      get "/items/random" => "items#random"
       resources :items, only: [:index, :show]
+      get "/items/:id/invoice_items" => "items#find_invoice_items"
+      get "/items/:id/merchant" => "items#find_merchant"
 
       #transactions
       get "/transactions/find" => "transactions#find"
@@ -45,8 +47,8 @@ Rails.application.routes.draw do
       get "/invoice_items/find_all" => "invoice_items#find_all"
       get "/invoice_items/random" => "invoice_items#random"
       resources :invoice_items, only: [:index, :show]
-      get "/invoice_items/:id/invoice" => "invoice_items#invoice_id"
-      get "/invoice_items/:id/items" => "invoice_items#item_id"
+      get "/invoice_items/:id/invoice" => "invoice_items#find_invoice"
+      get "/invoice_items/:id/item" => "invoice_items#find_item"
     end
   end
 end

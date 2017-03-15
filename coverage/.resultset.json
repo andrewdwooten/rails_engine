@@ -404,6 +404,8 @@
         1,
         1,
         1,
+        1,
+        1,
         null,
         null,
         1,
@@ -988,6 +990,7 @@
         1,
         1,
         1,
+        1,
         null,
         1,
         1,
@@ -1207,7 +1210,31 @@
         null
       ],
       "/Users/wonderland/Turing/3module/Projects/Rails_Engine/rails_engine/spec/requests/api/v1/items/item_relationship_spec.rb": [
-
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null
       ],
       "/Users/wonderland/Turing/3module/Projects/Rails_Engine/rails_engine/spec/requests/api/v1/items/item_request_spec.rb": [
         1,
@@ -1848,6 +1875,18 @@
         null,
         null
       ],
+      "/Users/wonderland/Turing/3module/Projects/Rails_Engine/rails_engine/app/serializers/invoice_serializer.rb": [
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/wonderland/Turing/3module/Projects/Rails_Engine/rails_engine/app/serializers/item_serializer.rb": [
+        1,
+        1,
+        null,
+        null
+      ],
       "/Users/wonderland/Turing/3module/Projects/Rails_Engine/rails_engine/app/serializers/invoice_item_serializer.rb": [
         1,
         1,
@@ -1881,7 +1920,11 @@
         null,
         null,
         1,
-        2,
+        1,
+        null,
+        null,
+        1,
+        1,
         null,
         null,
         1,
@@ -1892,12 +1935,10 @@
         1,
         null,
         null,
-        null,
-        null,
         1,
+        null,
         1,
         10,
-        null,
         null,
         null,
         null,
@@ -1911,10 +1952,9 @@
         1,
         null
       ],
-      "/Users/wonderland/Turing/3module/Projects/Rails_Engine/rails_engine/app/serializers/invoice_serializer.rb": [
+      "/Users/wonderland/Turing/3module/Projects/Rails_Engine/rails_engine/app/serializers/merchant_serializer.rb": [
         1,
         1,
-        null,
         null
       ],
       "/Users/wonderland/Turing/3module/Projects/Rails_Engine/rails_engine/app/controllers/api/v1/items_controller.rb": [
@@ -1942,6 +1982,14 @@
         null,
         1,
         1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
         11,
         null,
         null,
@@ -1949,12 +1997,6 @@
         null,
         null,
         null,
-        null,
-        null
-      ],
-      "/Users/wonderland/Turing/3module/Projects/Rails_Engine/rails_engine/app/serializers/item_serializer.rb": [
-        1,
-        1,
         null,
         null
       ],
@@ -1993,11 +2035,6 @@
         1,
         7,
         null,
-        null
-      ],
-      "/Users/wonderland/Turing/3module/Projects/Rails_Engine/rails_engine/app/serializers/merchant_serializer.rb": [
-        1,
-        1,
         null
       ],
       "/Users/wonderland/Turing/3module/Projects/Rails_Engine/rails_engine/app/controllers/api/v1/transactions_controller.rb": [
@@ -2040,6 +2077,6 @@
         null
       ]
     },
-    "timestamp": 1489613300
+    "timestamp": 1489620358
   }
 }

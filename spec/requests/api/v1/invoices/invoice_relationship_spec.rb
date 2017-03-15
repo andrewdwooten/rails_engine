@@ -23,7 +23,8 @@ describe "Invoice API" do
 
   it "returns a collection of associated items" do  #this test is a duplicate
     invoice = create(:invoice)
-    item = create(:invoice_item, invoice_id: invoice.id)
+    item = create(:item)
+    invoice_item = create(:invoice_item, item_id: item.id, invoice_id: invoice.id)
     get "/api/v1/invoices/#{invoice.id}/items"
     query = JSON.parse(response.body)
 
@@ -38,7 +39,7 @@ describe "Invoice API" do
     query = JSON.parse(response.body)
 
     expect(response).to be_success
-    expect(query).to eq(customer.id)
+    expect(query["id"]).to eq(customer.id)
   end
 
   it "returns the associated merchant" do
@@ -48,6 +49,6 @@ describe "Invoice API" do
     query = JSON.parse(response.body)
 
     expect(response).to be_success
-    expect(query).to eq(merchant.id)
+    expect(query["id"]).to eq(merchant.id)
   end
 end
