@@ -11,11 +11,15 @@ Rails.application.routes.draw do
       get "/merchants/:id/invoices(.:format)" => "merchants#merchant_invoices"
 
       #invoices
-      get '/invoices/find' => "invoices#find"
-      get '/invoices/random' => "invoices#random"
-      get '/invoices/find_all' => "invoices#find_all"
-      get '/api/v1/invoices/:id/transactions' => "invoices#transactions"
+      get "/invoices/find" => "invoices#find"
+      get "/invoices/random" => "invoices#random"
+      get "/invoices/find_all" => "invoices#find_all"
       resources :invoices, only: [:index, :show]
+      get "/invoices/:id/transactions" => "invoices#invoice_transactions"
+      get "/invoices/:id/invoice_items" => "invoices#invoice_items"
+      get "/invoices/:id/items" => "invoices#invoice_items" #here
+      get "/invoices/:id/customer" => "invoices#customer"
+      get "/invoices/:id/merchant" => "invoices#merchant"
 
       #customers
       get "/customers/find" => "customers#find"

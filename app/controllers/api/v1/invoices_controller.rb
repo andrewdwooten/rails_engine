@@ -20,6 +20,24 @@ class Api::V1::InvoicesController < ApplicationController
     render json: Invoice.find_random
   end
 
+  def invoice_transactions
+    render json: Invoice.find(params[:id]).transactions
+  end
+
+  def invoice_items
+    render json: Invoice.find(params[:id]).invoice_items
+  end
+
+  def customer
+    render json: Invoice.find(params[:id]).customer_id
+  end
+
+  def merchant
+    render json: Invoice.find(params[:id]).merchant_id
+
+  end
+
+
 private
   def search_params
     params.permit(:id,
