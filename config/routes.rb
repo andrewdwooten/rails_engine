@@ -26,6 +26,13 @@ Rails.application.routes.draw do
       get "/items/find_all" => "items#find_all"
       get "items/random" => "items#random"
       resources :items, only: [:index, :show]
+
+
+      #transactions
+      get "/transactions/find" => "transactions#find"
+      get "/transactions/find_all" => "transactions#find_all"
+      get "/transactions/random" => "transactions#random"
+      resources :transactions, only: [:index, :show]
     end
   end
 end
