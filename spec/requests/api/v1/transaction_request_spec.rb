@@ -31,7 +31,7 @@ describe "Transaction API" do
     query = JSON.parse(response.body)
 
     expect(response).to be_success
-    expect(query["invoice_id"]).to eq(transaction.invoice_id)
+    expect(query["id"]).to eq(transaction.id)
   end
 
   it "finds a single record based on a when given a credit_card_number" do
@@ -40,7 +40,7 @@ describe "Transaction API" do
     query = JSON.parse(response.body)
 
     expect(response).to be_success
-    expect(query["credit_card_number"]).to eq(transaction.credit_card_number)
+    expect(query["id"]).to eq(transaction.id)
   end
 
   it "finds a single record based on a when given a credit_card_expiration_date" do
@@ -49,7 +49,7 @@ describe "Transaction API" do
     query = JSON.parse(response.body)
 
     expect(response).to be_success
-    expect(query["credit_card_expiration_date"]).to eq(transaction.credit_card_expiration_date)
+    expect(query["id"]).to eq(transaction.id)
   end
 
   it "finds a single record based on a when given a result" do
@@ -58,7 +58,7 @@ describe "Transaction API" do
     query = JSON.parse(response.body)
 
     expect(response).to be_success
-    expect(query["result"]).to eq(transaction.result)
+    expect(query["id"]).to eq(transaction.id)
   end
 
   it "finds a single record based on a when given a created_at" do
@@ -68,7 +68,7 @@ describe "Transaction API" do
     query = JSON.parse(response.body)
 
     expect(response).to be_success
-    expect(query["created_at"]).to eq(transaction.created_at.as_json)
+    expect(query["id"]).to eq(transaction.id)
   end
 
   it "finds a single record based on a when given a updated_at" do
@@ -78,7 +78,7 @@ describe "Transaction API" do
     query = JSON.parse(response.body)
 
     expect(response).to be_success
-    expect(query["updated_at"]).to eq(transaction.updated_at.as_json)
+    expect(query["id"]).to eq(transaction.id)
   end
 
   it "finds all matches with a given invoice_id" do
@@ -89,8 +89,8 @@ describe "Transaction API" do
     query = JSON.parse(response.body)
 
     expect(response).to be_success
-    expect(query[0]["invoice_id"]).to eq(transaction_one.invoice_id)
-    expect(query[1]["invoice_id"]).to eq(transaction_two.invoice_id)
+    expect(query[0]["id"]).to eq(transaction_one.id)
+    expect(query[1]["id"]).to eq(transaction_two.id)
   end
   it "finds all matches with a given credit card number" do
     transaction_one = create(:transaction)
@@ -98,8 +98,8 @@ describe "Transaction API" do
     get "/api/v1/transactions/find_all?credit_card_number=4678-1242-5324-1233"
     query = JSON.parse(response.body)
     expect(response).to be_success
-    expect(query[0]["credit_card_number"]).to eq(transaction_one.credit_card_number)
-    expect(query[1]["credit_card_number"]).to eq(transaction_two.credit_card_number)
+    expect(query[0]["id"]).to eq(transaction_one.id)
+    expect(query[1]["id"]).to eq(transaction_two.id)
   end
 
   it "finds all matches with a given credit card expiration date" do
@@ -109,8 +109,8 @@ describe "Transaction API" do
     query = JSON.parse(response.body)
 
     expect(response).to be_success
-    expect(query[0]["credit_card_expiration_date"]).to eq(transaction_one.credit_card_expiration_date)
-    expect(query[1]["credit_card_expiration_date"]).to eq(transaction_two.credit_card_expiration_date)
+    expect(query[0]["id"]).to eq(transaction_one.id)
+    expect(query[1]["id"]).to eq(transaction_two.id)
   end
 
   it "finds all matches with a given result" do
@@ -120,8 +120,8 @@ describe "Transaction API" do
     query = JSON.parse(response.body)
 
     expect(response).to be_success
-    expect(query[0]["result"]).to eq(transaction_one.result)
-    expect(query[1]["result"]).to eq(transaction_two.result)
+    expect(query[0]["id"]).to eq(transaction_one.id)
+    expect(query[1]["id"]).to eq(transaction_two.id)
   end
 
   it "finds all matches when given created_at" do
@@ -134,8 +134,8 @@ describe "Transaction API" do
     query = JSON.parse(response.body)
 
     expect(response).to be_success
-    expect(query[0]["created_at"]).to eq(transaction.created_at.as_json)
-    expect(query[1]["created_at"]).to eq(other_transaction.created_at.as_json)
+    expect(query[0]["id"]).to eq(transaction.id)
+    expect(query[1]["id"]).to eq(other_transaction.id)
   end
 
   it "finds all matches when given name and created_at" do
@@ -148,8 +148,8 @@ describe "Transaction API" do
     query = JSON.parse(response.body)
 
     expect(response).to be_success
-    expect(query[0]["updated_at"]).to eq(transaction.updated_at.as_json)
-    expect(query[1]["updated_at"]).to eq(other_transaction.updated_at.as_json) # here too
+    expect(query[0]["id"]).to eq(transaction.id)
+    expect(query[1]["id"]).to eq(other_transaction.id) # here too
   end
 
   it "returns a random resource for transaction" do
