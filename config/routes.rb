@@ -12,8 +12,9 @@ Rails.application.routes.draw do
       get '/invoices/find' => "invoices#find"
       get '/invoices/random' => "invoices#random"
       get '/invoices/find_all' => "invoices#find_all"
+      get '/api/v1/invoices/:id/transactions' => "invoices#transactions"
       resources :invoices, only: [:index, :show]
- 
+
       #customers
       get "/customers/find" => "customers#find"
       get "/customers/find_all" => "customers#find_all"
