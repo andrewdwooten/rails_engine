@@ -9,6 +9,15 @@ require './app/models/transaction.rb'
 require 'rake'
 
 
+InvoiceItem.destroy_all
+Item.destroy_all
+Transaction.destroy_all
+Invoice.destroy_all
+Customer.destroy_all
+Merchant.destroy_all 
+
+
+
 task :populate => :environment do
   customer_file = './db/csv/customers.csv'
   customers = File.read(customer_file)
@@ -46,7 +55,7 @@ task :populate => :environment do
       id: row[0],
       name: row[1],
       description: row[2],
-      unit_price: (row[3].to_i / 100),
+      unit_price: (row[3].to_f / 100),
       merchant_id: row[4],
       created_at: row[5],
       updated_at: row[6]
@@ -79,7 +88,7 @@ task :populate => :environment do
       item_id: row[1],
       invoice_id: row[2],
       quantity: row[3],
-      unit_price: (row[4].to_i / 100 ),
+      unit_price: (row[4].to_f / 100 ),
       created_at: row[5],
       updated_at: row[6]
     )
