@@ -20,6 +20,14 @@ class Api::V1::InvoiceItemsController < ApplicationController
     render json: InvoiceItem.find_random
   end
 
+  def invoice_id
+    render json: InvoiceItem.find(params[:id]).invoice_id
+  end
+
+  def item_id
+    render json: InvoiceItem.find(params[:id]).item_id
+  end
+
 private
   def search_params
     params.permit(:id,
