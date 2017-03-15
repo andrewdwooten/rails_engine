@@ -52,7 +52,8 @@ describe "Invoices API" do
     end
 
     it "returns an invoice based on status" do
-      invoice = create(:invoice)
+      invoice = create(:invoice,
+                        status: 'test')
 
       get "/api/v1/invoices/find?status=#{invoice.status}"
 
@@ -60,7 +61,7 @@ describe "Invoices API" do
 
       invoice_json = JSON.parse(response.body)
 
-      expect(invoice_json["status"]).to eq(invoice.status)
+      expect(invoice_json["status"]).to eq('test')
     end
 
     it "returns an invoice based on created at stamp" do
@@ -139,17 +140,17 @@ describe "Invoices API" do
 
     it "returns all invoices found by status" do
       create(:invoice,
-              status: 'Test')
+              status: 'test')
       create(:invoice,
-              status: 'Test')
+              status: 'test')
 
       get "/api/v1/invoices/find_all?status=test"
 
       expect(response).to be_success
 
       json_response = JSON.parse(response.body)
-      expect(json_response[0]["status"]).to eq('Test')
-      expect(json_response[1]["status"]).to eq('Test')
+      expect(json_response[0]["status"]).to eq('test')
+      expect(json_response[1]["status"]).to eq('test')
       expect(json_response.count).to eq(2)
     end
 
