@@ -26,7 +26,7 @@ describe "Invoice_items API" do
     expect(invoice_item_json["item_id"]).to eq(InvoiceItem.find(id).item_id)
     expect(invoice_item_json["invoice_id"]).to eq(InvoiceItem.find(id).invoice_id)
     expect(invoice_item_json["quantity"]).to eq(InvoiceItem.find(id).quantity)
-    expect(invoice_item_json["unit_price"]).to eq(InvoiceItem.find(id).unit_price)
+    expect(invoice_item_json["unit_price"]).to eq(InvoiceItem.find(id).unit_price.to_s)
   end
 
     it "returns an invoice_item based on item_id" do
@@ -86,7 +86,7 @@ describe "Invoice_items API" do
 
       invoice_item_json = JSON.parse(response.body)
 
-      expect(invoice_item_json["unit_price"]).to eq(invoice_item.unit_price)
+      expect(invoice_item_json["unit_price"]).to eq(invoice_item.unit_price.to_s)
     end
 
     it "returns an invoice_item based on created at stamp" do
@@ -129,7 +129,7 @@ describe "Invoice_items API" do
       expect(invoice_item_json["invoice_id"]).to eq(InvoiceItem.find(id)[:invoice_id])
       expect(invoice_item_json["item_id"]).to eq(InvoiceItem.find(id)[:item_id])
       expect(invoice_item_json["quantity"]).to eq(InvoiceItem.find(id)[:quantity])
-      expect(invoice_item_json["unit_price"]).to eq(InvoiceItem.find(id)[:unit_price])
+      expect(invoice_item_json["unit_price"]).to eq(InvoiceItem.find(id)[:unit_price].to_s)
     end
 
     it "returns all invoice_items found by item_id" do
