@@ -92,7 +92,7 @@ describe "Merchant API" do
 
     expect(response).to be_success
     expect(thing[0]["id"]).to eq(merchant.id)
-    expect(thing[1]["id"]).to eq(other_merchant.id) # here too
+    expect(thing[1]["id"]).to eq(other_merchant.id)
   end
 
   it "returns a random resource for merchant" do

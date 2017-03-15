@@ -30,7 +30,7 @@ describe "Customer API" do
     query = JSON.parse(response.body)
 
     expect(response).to be_success
-    expect(query["first_name"]).to eq(customer.first_name)
+    expect(query["id"]).to eq(customer.id)
   end
 
   it "finds a single record based on a when given a last_name" do
@@ -39,7 +39,7 @@ describe "Customer API" do
     query = JSON.parse(response.body)
 
     expect(response).to be_success
-    expect(query["last_name"]).to eq(customer.last_name)
+    expect(query["id"]).to eq(customer.id)
   end
 
   it "finds a single record based on a when given a created_at" do
@@ -49,7 +49,7 @@ describe "Customer API" do
     query = JSON.parse(response.body)
 
     expect(response).to be_success
-    expect(query["created_at"]).to eq(customer.created_at.as_json)
+    expect(query["id"]).to eq(customer.id)
   end
 
   it "finds a single record based on a when given a updated_at" do
@@ -59,7 +59,7 @@ describe "Customer API" do
     query = JSON.parse(response.body)
 
     expect(response).to be_success
-    expect(query["updated_at"]).to eq(customer.updated_at.as_json)
+    expect(query["id"]).to eq(customer.id)
   end
 
   it "finds all matches with a given first name" do
@@ -69,8 +69,8 @@ describe "Customer API" do
     query = JSON.parse(response.body)
 
     expect(response).to be_success
-    expect(query[0]["first_name"]).to eq(customer_one.first_name)
-    expect(query[1]["first_name"]).to eq(customer_two.first_name)
+    expect(query[0]["id"]).to eq(customer_one.id)
+    expect(query[1]["id"]).to eq(customer_two.id)
   end
 
   it "finds all matches with a given last name" do
@@ -80,8 +80,8 @@ describe "Customer API" do
     query = JSON.parse(response.body)
     #require 'pry'; binding.pry
     expect(response).to be_success
-    expect(query[0]["last_name"]).to eq(customer_one.last_name)
-    expect(query[1]["last_name"]).to eq(customer_two.last_name)
+    expect(query[0]["id"]).to eq(customer_one.id)
+    expect(query[1]["id"]).to eq(customer_two.id)
   end
 
   it "finds all matches when given created_at" do
@@ -94,8 +94,8 @@ describe "Customer API" do
     query = JSON.parse(response.body)
 
     expect(response).to be_success
-    expect(query[0]["created_at"]).to eq(customer.created_at.as_json)
-    expect(query[1]["created_at"]).to eq(other_customer.created_at.as_json)
+    expect(query[0]["id"]).to eq(customer.id)
+    expect(query[1]["id"]).to eq(other_customer.id)
   end
 
   it "finds all matches when given name and created_at" do
@@ -108,8 +108,8 @@ describe "Customer API" do
     query = JSON.parse(response.body)
 
     expect(response).to be_success
-    expect(query[0]["updated_at"]).to eq(customer.updated_at.as_json)
-    expect(query[1]["updated_at"]).to eq(other_customer.updated_at.as_json) # here too
+    expect(query[0]["id"]).to eq(customer.id)
+    expect(query[1]["id"]).to eq(other_customer.id) # here too
   end
 
   it "returns a random resource for customer" do
