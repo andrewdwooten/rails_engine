@@ -1,5 +1,6 @@
 require 'rails_helper'
 
+
 describe "Invoices API" do
   it "sends a list of items" do
     create_list(:item, 3)
@@ -9,7 +10,7 @@ describe "Invoices API" do
     expect(response).to be_success
 
     items = JSON.parse(response.body)
-    
+
     expect(items.count).to eq(3)
   end
 
@@ -26,7 +27,7 @@ describe "Invoices API" do
     expect(item_json["name"]).to eq(Item.find(id).name)
     expect(item_json["merchant_id"]).to eq(Item.find(id).merchant_id)
     expect(item_json["description"]).to eq(Item.find(id).description)
-    expect(item_json["unit_price"]).to eq(Item.find(id).unit_price)
+    expect(item_json["unit_price"]).to eq(Item.find(id).unit_price.to_s)
   end
 
     it "returns an item based on merchant_id" do
@@ -105,7 +106,7 @@ describe "Invoices API" do
       expect(item_json["merchant_id"]).to eq(Item.find(id)[:merchant_id])
       expect(item_json["name"]).to eq(Item.find(id)[:name])
       expect(item_json["description"]).to eq(Item.find(id)[:description])
-      expect(item_json["unit_price"]).to eq(Item.find(id)[:unit_price])
+      expect(item_json["unit_price"]).to eq(Item.find(id)[:unit_price].to_s)
     end
 
     it "returns all items found by merchant_id" do
