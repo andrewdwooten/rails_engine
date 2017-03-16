@@ -16,4 +16,12 @@ class Merchant < ApplicationRecord
     .where(invoices: {created_at: date})
     .sum('quantity * unit_price')
   end
+
+  def self.ranked_by_revenue(quantity)
+    joins(invoices: [:invoice_items, :transactions])
+    .where(transactions: {result: "success"})
+    .group(:id)
+    .order("sum(quantity * unit_price) DESC")
+    .limit(quantity)
+  end
 end
