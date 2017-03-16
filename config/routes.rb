@@ -6,6 +6,7 @@ Rails.application.routes.draw do
       get "/merchants/find" => "merchants#find"
       get "/merchants/find_all" => "merchants#find_all"
       get "/merchants/random" => "merchants#random"
+      get "/merchants/revenue" => "merchantsbusiness#revenue_on_date"
       resources :merchants, only: [:index, :show]
       get "/merchants/:id/items(.:format)" => "merchants#merchant_items"
       get "/merchants/:id/invoices(.:format)" => "merchants#merchant_invoices"
