@@ -2,17 +2,25 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
 
-      #merchants
-      get "/merchants/find" => "merchants#find"
-      get "/merchants/find_all" => "merchants#find_all"
-      get "/merchants/random" => "merchants#random"
-      get "/merchants/most_items" => "merchants#most_items"
-      get "/merchants/most_revenue" => "merchants#most_revenue"  #BI
-      resources :merchants, only: [:index, :show]
-      get "/merchants/:id/items" => "merchants#merchant_items"
-      get "/merchants/:id/invoices" => "merchants#merchant_invoices"
+      # Merchants
+      #----------#
 
-      #invoices
+        #Business Intelligence
+          get "/merchants/most_items" => "merchantbusiness#most_items"
+          get "/merchants/revenue" => "merchantbusiness#revenue_on_date"  
+
+        #Records
+          get "/merchants/find" => "merchants#find"
+          get "/merchants/find_all" => "merchants#find_all"
+          get "/merchants/random" => "merchants#random"
+          resources :merchants, only: [:index, :show]
+
+        #Relationships
+          get "/merchants/:id/items" => "merchants#merchant_items"  #
+          get "/merchants/:id/invoices" => "merchants#merchant_invoices"
+
+
+      # Invoices
       get "/invoices/find" => "invoices#find"
       get "/invoices/random" => "invoices#random"
       get "/invoices/find_all" => "invoices#find_all"

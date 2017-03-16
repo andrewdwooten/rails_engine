@@ -103,7 +103,6 @@ describe "Merchant API" do
 
     get "/api/v1/merchants/random"
     thing = JSON.parse(response.body)
-    #require 'pry'; binding.pry
     expect(response).to be_success
     id = thing[0]["id"]
     merch = Merchant.find(id).id
