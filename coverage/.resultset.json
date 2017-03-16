@@ -381,6 +381,8 @@
         1,
         1,
         1,
+        1,
+        1,
         null,
         null,
         1,
@@ -563,6 +565,9 @@
         1,
         null,
         null
+      ],
+      "/Users/wonderland/Turing/3module/Projects/Rails_Engine/rails_engine/spec/requests/api/v1/customers/customer_bi_spec.rb": [
+
       ],
       "/Users/wonderland/Turing/3module/Projects/Rails_Engine/rails_engine/spec/requests/api/v1/customers/customer_request_spec.rb": [
         1,
@@ -1209,6 +1214,9 @@
         null,
         null
       ],
+      "/Users/wonderland/Turing/3module/Projects/Rails_Engine/rails_engine/spec/requests/api/v1/items/item_bi_spec.rb": [
+
+      ],
       "/Users/wonderland/Turing/3module/Projects/Rails_Engine/rails_engine/spec/requests/api/v1/items/item_relationship_spec.rb": [
         1,
         null,
@@ -1480,6 +1488,40 @@
         1,
         1,
         1,
+        null,
+        null
+      ],
+      "/Users/wonderland/Turing/3module/Projects/Rails_Engine/rails_engine/spec/requests/api/v1/merchants/merchant_bi_spec.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        0,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        null,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
         null,
         null
       ],
@@ -2032,6 +2074,10 @@
         null,
         1,
         null,
+        null,
+        null,
+        1,
+        null,
         1,
         7,
         null,
@@ -2077,6 +2123,6 @@
         null
       ]
     },
-    "timestamp": 1489620358
+    "timestamp": 1489626112
   }
 }

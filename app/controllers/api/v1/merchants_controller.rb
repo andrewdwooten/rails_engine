@@ -27,6 +27,10 @@ class Api::V1::MerchantsController < ApplicationController
     render json: Merchant.invoices(params)
   end
 
+  def most_items
+    render json: Merchant.
+  end
+
   private
 
   def search_params
