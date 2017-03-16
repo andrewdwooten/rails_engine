@@ -1,6 +1,6 @@
-require 'rails_helper'
+require "rails_helper"
 
-describe "Invoice API" do
+describe "Invoice Relationship Endpoints" do
   it "returns a collection of associated transactions" do
     invoice = create(:invoice)
     transaction = create(:transaction, invoice_id: invoice.id)

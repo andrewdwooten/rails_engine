@@ -1,10 +1,10 @@
-require 'rails_helper'
+require "rails_helper"
 
-describe "Invoices API" do
+describe "Invoice Record Endpoints" do
   it "sends a list of invoices" do
     create_list(:invoice, 3)
 
-    get '/api/v1/invoices.json'
+    get "/api/v1/invoices.json"
 
     expect(response).to be_success
 
@@ -53,7 +53,7 @@ describe "Invoices API" do
 
     it "returns an invoice based on status" do
       invoice = create(:invoice,
-                        status: 'test')
+                        status: "test")
 
       get "/api/v1/invoices/find?status=#{invoice.status}"
 
@@ -61,7 +61,7 @@ describe "Invoices API" do
 
       invoice_json = JSON.parse(response.body)
 
-      expect(invoice_json["status"]).to eq('test')
+      expect(invoice_json["status"]).to eq("test")
     end
 
     it "returns an invoice based on created at stamp" do
@@ -140,17 +140,17 @@ describe "Invoices API" do
 
     it "returns all invoices found by status" do
       create(:invoice,
-              status: 'test')
+              status: "test")
       create(:invoice,
-              status: 'test')
+              status: "test")
 
       get "/api/v1/invoices/find_all?status=test"
 
       expect(response).to be_success
 
       json_response = JSON.parse(response.body)
-      expect(json_response[0]["status"]).to eq('test')
-      expect(json_response[1]["status"]).to eq('test')
+      expect(json_response[0]["status"]).to eq("test")
+      expect(json_response[1]["status"]).to eq("test")
       expect(json_response.count).to eq(2)
     end
 
@@ -166,8 +166,8 @@ describe "Invoices API" do
       expect(response).to be_success
 
       json_response = JSON.parse(response.body)
-      expect(json_response[0]["status"]).to eq('Teststatus')
-      expect(json_response[1]["status"]).to eq('Teststatus')
+      expect(json_response[0]["status"]).to eq("Teststatus")
+      expect(json_response[1]["status"]).to eq("Teststatus")
       expect(json_response.count).to eq(2)
     end
 
@@ -183,8 +183,8 @@ describe "Invoices API" do
       expect(response).to be_success
 
       json_response = JSON.parse(response.body)
-      expect(json_response[0]["status"]).to eq('Teststatus')
-      expect(json_response[1]["status"]).to eq('Teststatus')
+      expect(json_response[0]["status"]).to eq("Teststatus")
+      expect(json_response[1]["status"]).to eq("Teststatus")
       expect(json_response.count).to eq(2)
     end
 end

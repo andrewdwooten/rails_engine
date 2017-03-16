@@ -10,6 +10,7 @@ class Merchant < ApplicationRecord
     find(params[:id]).invoices
   end
 
+#go into application__record
   def self.most_items(amount)
     joins(invoices: [:invoice_items, :items])
     .group(:id)
@@ -17,7 +18,11 @@ class Merchant < ApplicationRecord
     .limit(amount)
   end
 
+#go into application__record
   def self.revenue_on_date(date)
-    joins.
+    joins(invoices: [:invoice_items, :transactions])
+    .where(transactions: {result: "success"})
+    .where(invoices: {created_at: date})
+    .sum('quantity * unit_price')
   end
 end

@@ -20,14 +20,6 @@ class Api::V1::CustomersController < ApplicationController
     render json: Customer.find_random
   end
 
-  def invoices
-    render json: Customer.invoices(params)
-  end
-
-  def transactions
-    render json: Customer.transactions(params)
-  end
-
   private
 
   def search_params

@@ -5,6 +5,7 @@ class Item < ApplicationRecord
   has_many :transactions, through: :invoices
   accepts_nested_attributes_for :transactions
 
+#go into application__record?
   def self.most_revenue(quantity)
     joins(invoices: [:invoice_items, :transactions])
     .where(transactions: {result: "success"})

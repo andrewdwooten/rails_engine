@@ -12,23 +12,16 @@ class Api::V1::ItemsController < ApplicationController
     render json: Item.search(search_params)
   end
 
-  def random
-    render json: Item.find_random
-  end
-
   def find_all
     render json: Item.search_all(search_params)
   end
 
-  def find_invoice_items
-    render json: Item.find(params[:id]).invoice_items
+  def random
+    render json: Item.find_random
   end
 
-  def find_merchant
-    render json: Item.find(params[:id]).merchant
-  end
-
-private
+  private
+  
   def search_params
     params.permit(:id,
                   :name,

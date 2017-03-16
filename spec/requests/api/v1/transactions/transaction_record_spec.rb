@@ -1,6 +1,6 @@
 require "rails_helper"
 
-describe "Transaction API" do
+describe "Transaction Record Endpoints" do
   it "displays all transactions" do
     create_list(:transaction, 50)
     get "/api/v1/transactions"

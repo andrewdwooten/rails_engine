@@ -1,11 +1,11 @@
-require 'rails_helper'
+require "rails_helper"
 
 
-describe "Invoices API" do
+describe "Item Record Endpoints" do
   it "sends a list of items" do
     create_list(:item, 3)
 
-    get '/api/v1/items.json'
+    get "/api/v1/items.json"
 
     expect(response).to be_success
 
@@ -141,17 +141,17 @@ describe "Invoices API" do
 
     it "returns all items found by description" do
       create(:item,
-              description: 'Shiny')
+              description: "Shiny")
       create(:item,
-              description: 'Shiny')
+              description: "Shiny")
 
       get "/api/v1/items/find_all?description=Shiny"
 
       expect(response).to be_success
 
       json_response = JSON.parse(response.body)
-      expect(json_response[0]["description"]).to eq('Shiny')
-      expect(json_response[1]["description"]).to eq('Shiny')
+      expect(json_response[0]["description"]).to eq("Shiny")
+      expect(json_response[1]["description"]).to eq("Shiny")
       expect(json_response.count).to eq(2)
     end
 
@@ -167,8 +167,8 @@ describe "Invoices API" do
       expect(response).to be_success
 
       json_response = JSON.parse(response.body)
-      expect(json_response[0]["name"]).to eq('Hammer')
-      expect(json_response[1]["name"]).to eq('Hammer')
+      expect(json_response[0]["name"]).to eq("Hammer")
+      expect(json_response[1]["name"]).to eq("Hammer")
       expect(json_response.count).to eq(2)
     end
 
@@ -184,8 +184,8 @@ describe "Invoices API" do
       expect(response).to be_success
 
       json_response = JSON.parse(response.body)
-      expect(json_response[0]["name"]).to eq('Hammer')
-      expect(json_response[1]["name"]).to eq('Hammer')
+      expect(json_response[0]["name"]).to eq("Hammer")
+      expect(json_response[1]["name"]).to eq("Hammer")
       expect(json_response.count).to eq(2)
     end
 
@@ -198,7 +198,7 @@ describe "Invoices API" do
       expect(response).to be_success
 
       json_response = JSON.parse(response.body)
-      expect(json_response[0]["name"]).to eq('Hammer')
+      expect(json_response[0]["name"]).to eq("Hammer")
       expect(json_response[0]["id"]).to eq(id)
       expect(json_response.count).to eq(1)
     end
