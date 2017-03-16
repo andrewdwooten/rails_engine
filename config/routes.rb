@@ -33,6 +33,7 @@ Rails.application.routes.draw do
       get "/items/find" => "items#find"
       get "/items/find_all" => "items#find_all"
       get "/items/random" => "items#random"
+      get "/items/most_revenue" => "itembusiness#most_revenue"
       resources :items, only: [:index, :show]
       get "/items/:id/invoice_items" => "items#find_invoice_items"
       get "/items/:id/merchant" => "items#find_merchant"

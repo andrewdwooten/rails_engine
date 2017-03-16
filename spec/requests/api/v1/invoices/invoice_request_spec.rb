@@ -107,6 +107,7 @@ describe "Invoices API" do
     end
 
     it "returns all invoices found by customer_id" do
+      create(:customer, id: 1)
       create(:invoice,
               customer_id: 1)
       create(:invoice,
