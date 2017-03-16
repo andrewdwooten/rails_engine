@@ -1,5 +1,6 @@
 require 'rails_helper'
 
+
 describe "Invoices API" do
   it "sends a list of items" do
     create_list(:item, 3)
@@ -74,7 +75,7 @@ describe "Invoices API" do
       expect(response).to be_success
 
       item_json = JSON.parse(response.body)
-        
+
       expect(item_json["id"]).to eq(item.id)
     end
 
