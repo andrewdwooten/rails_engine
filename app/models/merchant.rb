@@ -24,4 +24,14 @@ class Merchant < ApplicationRecord
     .order("sum(quantity * unit_price) DESC")
     .limit(quantity)
   end
+
+  def self.favorite_customer(id)
+    Customer.joins(invoices: :transactions)
+      .joins("INNER JOIN merchants ON merchants.id = invoices.merchant_id")
+      .where(transactions: {result: "success"})
+      .where(merchants: {id: id})
+      .group(:id)
+      .order('count(transactions.*) DESC')
+      .limit(1)
+  end
 end

@@ -11,6 +11,7 @@ Rails.application.routes.draw do
       resources :merchants, only: [:index, :show]
       get "/merchants/:id/items(.:format)" => "merchants#merchant_items"
       get "/merchants/:id/invoices(.:format)" => "merchants#merchant_invoices"
+      get "/merchants/:id/favorite_customer(.:format)" => "merchantsbusiness#favorite_customer"
 
       #invoices
       get "/invoices/find" => "invoices#find"

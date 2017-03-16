@@ -110,6 +110,7 @@ describe "Invoices API" do
     end
 
     it "returns all items found by merchant_id" do
+      create(:merchant, id: 1)
       create(:item,
               merchant_id: 1)
       create(:item,

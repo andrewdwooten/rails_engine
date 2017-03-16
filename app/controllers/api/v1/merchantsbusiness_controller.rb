@@ -7,4 +7,8 @@ class Api::V1::MerchantsbusinessController < ApplicationController
   def ranked_by_revenue
     render json: Merchant.ranked_by_revenue(params[:quantity])
   end
+
+  def favorite_customer
+    render json: Merchant.favorite_customer(params[:id])[0]
+  end
 end

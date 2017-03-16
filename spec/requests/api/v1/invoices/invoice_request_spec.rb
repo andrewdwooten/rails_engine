@@ -123,6 +123,7 @@ describe "Invoices API" do
     end
 
     it "returns all invoices found by merchant_id" do
+      create(:merchant, id: 1)
       create(:invoice,
               merchant_id: 1)
       create(:invoice,
