@@ -107,10 +107,10 @@ describe "Invoices API" do
     end
 
     it "returns all invoices found by customer_id" do
+
       customer = create(:customer)
       invoices = create_list(:invoice, 2)
       customer.invoices << invoices
-
 
       get "/api/v1/invoices/find_all?customer_id=#{customer.id}"
 
