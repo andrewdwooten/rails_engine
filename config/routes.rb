@@ -28,11 +28,14 @@ Rails.application.routes.draw do
       get "/customers/find_all" => "customers#find_all"
       get "/customers/random" => "customers#random"
       resources :customers, only: [:index, :show]
+      get "/customers/:id/invoices" => "customers#invoices"
+      get "customers/:id/transactions" => "customers#transactions"
 
       #items
       get "/items/find" => "items#find"
       get "/items/find_all" => "items#find_all"
       get "/items/random" => "items#random"
+      get "/items/most_revenue" => "itembusiness#most_revenue"
       resources :items, only: [:index, :show]
       get "/items/:id/invoice_items" => "items#find_invoice_items"
       get "/items/:id/merchant" => "items#find_merchant"

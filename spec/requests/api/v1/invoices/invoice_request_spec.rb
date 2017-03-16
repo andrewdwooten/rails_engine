@@ -107,18 +107,18 @@ describe "Invoices API" do
     end
 
     it "returns all invoices found by customer_id" do
-      create(:invoice,
-              customer_id: 1)
-      create(:invoice,
-              customer_id: 1)
 
-      get "/api/v1/invoices/find_all?customer_id=1"
+      customer = create(:customer)
+      invoices = create_list(:invoice, 2)
+      customer.invoices << invoices
+
+      get "/api/v1/invoices/find_all?customer_id=#{customer.id}"
 
       expect(response).to be_success
 
       json_response = JSON.parse(response.body)
-      expect(json_response[0]["customer_id"]).to eq(1)
-      expect(json_response[1]["customer_id"]).to eq(1)
+      expect(json_response[0]["customer_id"]).to eq(customer.id)
+      expect(json_response[1]["customer_id"]).to eq(customer.id)
       expect(json_response.count).to eq(2)
     end
 
