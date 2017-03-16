@@ -4,7 +4,7 @@ describe "Merchant API" do
   #multiple
   it "returns the top merchants ranked by total revenue" do
     merchant = create(:merchant)
-    get "/api/v1/merchants/most_items?quantity=x"
+    get "/api/v1/merchants/most_items?quantity=4"
     thing = JSON.parse(response.body)
 
     expect(respone).to be_success

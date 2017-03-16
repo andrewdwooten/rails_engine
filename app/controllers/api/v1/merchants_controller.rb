@@ -19,16 +19,12 @@ class Api::V1::MerchantsController < ApplicationController
     render json: Merchant.find_random
   end
 
-  def merchant_items
+  def most_items
     render json: Merchant.items(params)
   end
 
   def merchant_invoices
     render json: Merchant.invoices(params)
-  end
-
-  def most_items
-    render json: Merchant.
   end
 
   private

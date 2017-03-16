@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe 'Merchant API relationship endpoints' do
+describe 'Merchant Relationship endpoints' do
   it 'returns collection of items associated with a merchant' do
     merchant = create(:merchant)
     merchant.items.create(name: 'test1')
