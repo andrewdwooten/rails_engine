@@ -9,7 +9,7 @@ Rails.application.routes.draw do
           get "/merchants/revenue" => "merchants_business#revenue_on_date"
           get "/merchants/most_revenue" => "merchants_business#ranked_by_revenue"
           get "/merchants/:id/favorite_customer" => "merchants_business#favorite_customer"
-          
+
         # Records
           get "/merchants/find" => "merchants#find"
           get "/merchants/find_all" => "merchants#find_all"
@@ -61,6 +61,7 @@ Rails.application.routes.draw do
       #-------#
         # Business Intelligence
           get "/items/most_revenue" => "items_business#most_revenue"
+          get "/items/:id/best_day" => "items_business#best_day"
 
         # Records
           get "/items/find" => "items#find"
