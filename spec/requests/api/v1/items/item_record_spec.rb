@@ -30,176 +30,176 @@ describe "Item Record Endpoints" do
     expect(item_json["unit_price"]).to eq(Item.find(id).unit_price.to_s)
   end
 
-  it "returns an item based on merchant_id" do
-    item = create(:item)
+    it "returns an item based on merchant_id" do
+      item = create(:item)
 
-    get "/api/v1/items/find?merchant_id=#{item.merchant_id}"
+      get "/api/v1/items/find?merchant_id=#{item.merchant_id}"
 
-    expect(response).to be_success
+      expect(response).to be_success
 
-    item_json = JSON.parse(response.body)
+      item_json = JSON.parse(response.body)
 
-    expect(item_json["merchant_id"]).to eq(item.merchant_id)
-  end
+      expect(item_json["merchant_id"]).to eq(item.merchant_id)
+    end
 
-  it "returns an item based on name" do
-    item = create(:item)
+    it "returns an item based on name" do
+      item = create(:item)
 
-    get "/api/v1/items/find?name=#{item.name}"
+      get "/api/v1/items/find?name=#{item.name}"
 
-    expect(response).to be_success
+      expect(response).to be_success
 
-    item_json = JSON.parse(response.body)
+      item_json = JSON.parse(response.body)
 
-    expect(item_json["name"]).to eq(item.name)
-  end
+      expect(item_json["name"]).to eq(item.name)
+    end
 
-  it "returns an item based on description" do
-    item = create(:item)
+    it "returns an item based on description" do
+      item = create(:item)
 
-    get "/api/v1/items/find?description=#{item.description}"
+      get "/api/v1/items/find?description=#{item.description}"
 
-    expect(response).to be_success
+      expect(response).to be_success
 
-    item_json = JSON.parse(response.body)
+      item_json = JSON.parse(response.body)
 
-    expect(item_json["description"]).to eq(item.description)
-  end
+      expect(item_json["description"]).to eq(item.description)
+    end
 
-  it "returns an item based on created at stamp" do
-    item = create(:item,
-                  created_at: "2012-03-27 14:54:09 UTC")
+    it "returns an item based on created at stamp" do
+      item = create(:item,
+                    created_at: "2012-03-27 14:54:09 UTC")
 
-    get "/api/v1/items/find?created_at=#{item.created_at}"
+      get "/api/v1/items/find?created_at=#{item.created_at}"
 
-    expect(response).to be_success
+      expect(response).to be_success
 
-    item_json = JSON.parse(response.body)
+      item_json = JSON.parse(response.body)
 
-    expect(item_json["id"]).to eq(item.id)
-  end
+      expect(item_json["id"]).to eq(item.id)
+    end
 
-  it "returns an item based on updated at stamp" do
-    item = create(:item,
-                  updated_at: "2012-03-27 14:54:09 UTC")
+    it "returns an item based on updated at stamp" do
+      item = create(:item,
+                    updated_at: "2012-03-27 14:54:09 UTC")
 
-    get "/api/v1/items/find?updated_at=#{item.updated_at}"
+      get "/api/v1/items/find?updated_at=#{item.updated_at}"
 
-    expect(response).to be_success
+      expect(response).to be_success
 
-    item_json = JSON.parse(response.body)
+      item_json = JSON.parse(response.body)
 
-    expect(item_json["id"]).to eq(item.id)
-  end
+      expect(item_json["id"]).to eq(item.id)
+    end
 
-  it "returns a random item" do
-    create(:item)
-    create(:item)
-
-
-    get "/api/v1/items/random"
-
-    expect(response).to be_success
-
-    item_json = JSON.parse(response.body)[0]
-    id = item_json["id"]
-    expect(item_json["merchant_id"]).to eq(Item.find(id)[:merchant_id])
-    expect(item_json["name"]).to eq(Item.find(id)[:name])
-    expect(item_json["description"]).to eq(Item.find(id)[:description])
-    expect(item_json["unit_price"]).to eq(Item.find(id)[:unit_price].to_s)
-  end
-
-  it "returns all items found by merchant_id" do
-    create(:item,
-            merchant_id: 1)
-    create(:item,
-            merchant_id: 1)
-
-    get "/api/v1/items/find_all?merchant_id=1"
-
-    expect(response).to be_success
-
-    json_response = JSON.parse(response.body)
-    expect(json_response[0]["merchant_id"]).to eq(1)
-    expect(json_response[1]["merchant_id"]).to eq(1)
-    expect(json_response.count).to eq(2)
-  end
-
-  it "returns all items found by name" do
-    create(:item)
-    create(:item)
-
-    get "/api/v1/items/find_all?name=Hammer"
-
-    expect(response).to be_success
-
-    json_response = JSON.parse(response.body)
-    expect(json_response[0]["name"]).to eq("Hammer")
-    expect(json_response[1]["name"]).to eq("Hammer")
-    expect(json_response.count).to eq(2)
-  end
-
-  it "returns all items found by description" do
-    create(:item,
-            description: "Shiny")
-    create(:item,
-            description: "Shiny")
-
-    get "/api/v1/items/find_all?description=Shiny"
-
-    expect(response).to be_success
-
-    json_response = JSON.parse(response.body)
-    expect(json_response[0]["description"]).to eq("Shiny")
-    expect(json_response[1]["description"]).to eq("Shiny")
-    expect(json_response.count).to eq(2)
-  end
-
-  it "returns all items found by created_at" do
-    create(:item,
-          created_at: "2012-03-27 14:54:09 UTC")
-    create(:item,
-          created_at: "2012-03-27 14:54:09 UTC")
+    it "returns a random item" do
+      create(:item)
+      create(:item)
 
 
-    get "/api/v1/items/find_all?created_at=2012-03-27 14:54:09 UTC"
+      get "/api/v1/items/random"
 
-    expect(response).to be_success
+      expect(response).to be_success
 
-    json_response = JSON.parse(response.body)
-    expect(json_response[0]["name"]).to eq("Hammer")
-    expect(json_response[1]["name"]).to eq("Hammer")
-    expect(json_response.count).to eq(2)
-  end
+      item_json = JSON.parse(response.body)[0]
+      id = item_json["id"]
+      expect(item_json["merchant_id"]).to eq(Item.find(id)[:merchant_id])
+      expect(item_json["name"]).to eq(Item.find(id)[:name])
+      expect(item_json["description"]).to eq(Item.find(id)[:description])
+      expect(item_json["unit_price"]).to eq(Item.find(id)[:unit_price].to_s)
+    end
 
-  it "returns all items found by updated at" do
-    create(:item,
-          updated_at: "2012-03-27 14:54:09 UTC")
-    create(:item,
-          updated_at: "2012-03-27 14:54:09 UTC")
+    it "returns all items found by merchant_id" do
+      create(:item,
+              merchant_id: 1)
+      create(:item,
+              merchant_id: 1)
+
+      get "/api/v1/items/find_all?merchant_id=1"
+
+      expect(response).to be_success
+
+      json_response = JSON.parse(response.body)
+      expect(json_response[0]["merchant_id"]).to eq(1)
+      expect(json_response[1]["merchant_id"]).to eq(1)
+      expect(json_response.count).to eq(2)
+    end
+
+    it "returns all items found by name" do
+      create(:item)
+      create(:item)
+
+      get "/api/v1/items/find_all?name=Hammer"
+
+      expect(response).to be_success
+
+      json_response = JSON.parse(response.body)
+      expect(json_response[0]["name"]).to eq("Hammer")
+      expect(json_response[1]["name"]).to eq("Hammer")
+      expect(json_response.count).to eq(2)
+    end
+
+    it "returns all items found by description" do
+      create(:item,
+              description: "Shiny")
+      create(:item,
+              description: "Shiny")
+
+      get "/api/v1/items/find_all?description=Shiny"
+
+      expect(response).to be_success
+
+      json_response = JSON.parse(response.body)
+      expect(json_response[0]["description"]).to eq("Shiny")
+      expect(json_response[1]["description"]).to eq("Shiny")
+      expect(json_response.count).to eq(2)
+    end
+
+    it "returns all items found by created_at" do
+      create(:item,
+            created_at: "2012-03-27 14:54:09 UTC")
+      create(:item,
+            created_at: "2012-03-27 14:54:09 UTC")
 
 
-    get "/api/v1/items/find_all?updated_at=2012-03-27 14:54:09 UTC"
+      get "/api/v1/items/find_all?created_at=2012-03-27 14:54:09 UTC"
 
-    expect(response).to be_success
+      expect(response).to be_success
 
-    json_response = JSON.parse(response.body)
-    expect(json_response[0]["name"]).to eq("Hammer")
-    expect(json_response[1]["name"]).to eq("Hammer")
-    expect(json_response.count).to eq(2)
-  end
+      json_response = JSON.parse(response.body)
+      expect(json_response[0]["name"]).to eq("Hammer")
+      expect(json_response[1]["name"]).to eq("Hammer")
+      expect(json_response.count).to eq(2)
+    end
 
-  it "returns all items found by id" do
-    id = create(:item).id
-    create(:item)
+    it "returns all items found by updated at" do
+      create(:item,
+            updated_at: "2012-03-27 14:54:09 UTC")
+      create(:item,
+            updated_at: "2012-03-27 14:54:09 UTC")
 
-    get "/api/v1/items/find_all?id=#{id}"
 
-    expect(response).to be_success
+      get "/api/v1/items/find_all?updated_at=2012-03-27 14:54:09 UTC"
 
-    json_response = JSON.parse(response.body)
-    expect(json_response[0]["name"]).to eq("Hammer")
-    expect(json_response[0]["id"]).to eq(id)
-    expect(json_response.count).to eq(1)
-  end
+      expect(response).to be_success
+
+      json_response = JSON.parse(response.body)
+      expect(json_response[0]["name"]).to eq("Hammer")
+      expect(json_response[1]["name"]).to eq("Hammer")
+      expect(json_response.count).to eq(2)
+    end
+
+    it "returns all items found by id" do
+      id = create(:item).id
+      create(:item)
+
+      get "/api/v1/items/find_all?id=#{id}"
+
+      expect(response).to be_success
+
+      json_response = JSON.parse(response.body)
+      expect(json_response[0]["name"]).to eq("Hammer")
+      expect(json_response[0]["id"]).to eq(id)
+      expect(json_response.count).to eq(1)
+    end
 end

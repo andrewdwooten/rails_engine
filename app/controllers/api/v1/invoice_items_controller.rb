@@ -1,4 +1,4 @@
-class Api::V1::InvoiceItems::InvoiceItemsController < ApplicationController
+class Api::V1::InvoiceItemsController < ApplicationController
 
   def index
     render json: InvoiceItem.all
@@ -21,7 +21,7 @@ class Api::V1::InvoiceItems::InvoiceItemsController < ApplicationController
   end
 
   private
-
+  
   def search_params
     params.permit(:id,
                  :item_id,
