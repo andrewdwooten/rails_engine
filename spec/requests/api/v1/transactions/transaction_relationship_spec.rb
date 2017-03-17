@@ -3,7 +3,6 @@ require "rails_helper"
 describe "Transaction Relationship Endpoint" do
   it "returns invoice associated with a transaction" do
     transaction = create(:transaction)
-    # transaction.invoice = create(:invoice)
 
     get "/api/v1/transactions/#{transaction.id}/invoice"
 

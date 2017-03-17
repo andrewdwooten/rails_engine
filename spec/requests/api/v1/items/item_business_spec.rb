@@ -1,7 +1,7 @@
 require "rails_helper"
 
 describe "Item Business Intelligence" do
-  xit "API returns top (x)quantity items by revenue" do
+  it "API returns top (x)quantity items by revenue" do
     item_good = create(:item)
     item_bad = create(:item)
     100.times do
