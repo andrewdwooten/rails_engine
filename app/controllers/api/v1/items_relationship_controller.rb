@@ -1,4 +1,4 @@
-class Api::V1::Items::ItemsRelationshipController < ApplicationController
+class Api::V1::ItemsRelationshipController < ApplicationController
   def find_invoice_items
     render json: Item.find(params[:id]).invoice_items
   end
@@ -7,9 +7,9 @@ class Api::V1::Items::ItemsRelationshipController < ApplicationController
     render json: Item.find(params[:id]).merchant
   end
 
-  # private
-  #
-  # def params
-  #
-  # end
+  private 
+
+  def params
+
+  end
 end
