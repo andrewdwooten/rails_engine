@@ -23,4 +23,13 @@ class Item < ApplicationRecord
     .order("sum(invoice_items.quantity) DESC")
     .pluck(:created_at).first
   end
+
+  def self.most_items(quantity)
+    joins(:invoice_items)
+    .joins(invoices: :transactions)
+    .where(transactions: {result: "success"})
+    .group(:id)
+    .order('count(transactions.*) DESC')
+    .limit(quantity)
+  end
 end

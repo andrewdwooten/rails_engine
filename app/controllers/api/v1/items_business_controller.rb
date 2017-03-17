@@ -8,4 +8,8 @@ class Api::V1::ItemsBusinessController < ApplicationController
     render json: {"best_day": Item.best_day(params[:id])}
   end
 
+  def most_items
+    render json: Item.most_items(params[:quantity])
+  end
+
 end
