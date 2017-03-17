@@ -1,4 +1,4 @@
-class Api::V1::Invoices::InvoicesController < ApplicationController
+class Api::V1::InvoicesController < ApplicationController
 
   def index
     render json: Invoice.all
@@ -20,7 +20,7 @@ class Api::V1::Invoices::InvoicesController < ApplicationController
     render json: Invoice.find_random
   end
 
-
+  
 
 private
 
