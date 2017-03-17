@@ -2,7 +2,7 @@ require "rails_helper"
 
 describe "Merchant Business Intelligence" do
   #multiple
-  xit "returns the x amount of top merchants with the most items sold" do
+  it "returns the x amount of top merchants with the most items sold" do
     merchant_one = create(:merchant)
     merchant_two = create(:merchant)
     invoice_one = create(:invoice, merchant_id: merchant_one.id)
@@ -16,17 +16,7 @@ describe "Merchant Business Intelligence" do
     expect(thing[0]["id"]).to eq(merchant_one.id)
   end
 
-  xit "returns the total revenue for date a across all merchants" do
-    #this one is wrong - Andy already did it
-    merchant = create(:merchant)
-    get "/api/v1/merchants/revenue?date=12-13"
-    thing = JSON.parse(response.body)
-
-    expect(respone).to be_success
-    expect(thing["revenue"]).to eq("000")
-  end
-
-  xit "returns total_revenue of all merchants on date" do
+  it "returns total_revenue of all merchants on date" do
     merchant_1 = create(:merchant)
     merchant_2 = create(:merchant)
     item_good = create(:item, merchant: merchant_1)
@@ -63,5 +53,15 @@ describe "Merchant Business Intelligence" do
 
     expect(respone).to be_success
     expect(thing["revenue"]).to eq("000")
+  end
+
+  xit "returns the total revenue for date a across all merchants" do
+    merchant = create(:merchant)
+    item = create(:item, merchant: merchant.id)
+    get "/api/v1/merchants/:id/revenue?date=x"
+    thing = JSON.parse(response.body)
+
+    expect(respone).to be_success
+    expect(thing["total_revenue"]).to eq("000")
   end
 end

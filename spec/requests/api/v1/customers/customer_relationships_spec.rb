@@ -12,7 +12,6 @@ describe "Customer Relationship Endpoints" do
     expect(response).to be_success
 
     customer_invoices = JSON.parse(response.body)
-
     expect(customer_invoices[0]["status"]).to eq("test1")
     expect(customer_invoices[1]["status"]).to eq("test2")
     expect(customer_invoices[2]["status"]).to eq("test3")

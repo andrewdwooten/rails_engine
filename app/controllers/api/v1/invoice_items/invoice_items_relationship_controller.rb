@@ -1,4 +1,4 @@
-class Api::V1::InvoiceItemsRelationshipController < ApplicationController
+class Api::V1::InvoiceItems::InvoiceItemsRelationshipController < ApplicationController
   def find_invoice
     render json: InvoiceItem.find(params[:id]).invoice
   end
@@ -7,9 +7,9 @@ class Api::V1::InvoiceItemsRelationshipController < ApplicationController
     render json: InvoiceItem.find(params[:id]).item
   end
 
-  private
-
-  def params
-
-  end 
+  # private
+  #
+  # def params
+  #
+  # end
 end

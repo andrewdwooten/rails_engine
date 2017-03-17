@@ -1,4 +1,4 @@
-class Api::V1::InvoicesRelationshipController < ApplicationController
+class Api::V1::Invoices::InvoicesRelationshipController < ApplicationController
   def invoice_transactions
     render json: Invoice.find(params[:id]).transactions
   end
@@ -19,9 +19,9 @@ class Api::V1::InvoicesRelationshipController < ApplicationController
     render json: Invoice.find(params[:id]).merchant
   end
 
-  private
-
-  def params
-
-  end
+  # private
+  #
+  # def params
+  #
+  # end
 end
