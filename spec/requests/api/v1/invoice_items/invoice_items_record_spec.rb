@@ -1,10 +1,10 @@
-require 'rails_helper'
+require "rails_helper"
 
-describe "Invoice_items API" do
+describe "Invoice Items Record Endpoints" do
   it "sends a list of invoice_item" do
     create_list(:invoice_item, 3)
 
-    get '/api/v1/invoice_items.json'
+    get "/api/v1/invoice_items.json"
 
     expect(response).to be_success
 

@@ -1,6 +1,6 @@
 require "rails_helper"
 
-describe "Customer API" do
+describe "Customer Record Endpoints" do
   it "displays all customers" do
     create_list(:customer, 50)
     get "/api/v1/customers"
@@ -78,7 +78,7 @@ describe "Customer API" do
     customer_two = create(:customer, last_name: "Hatter")
     get "/api/v1/customers/find_all?last_name=Hatter"
     query = JSON.parse(response.body)
-    #require 'pry'; binding.pry
+    #require "pry"; binding.pry
     expect(response).to be_success
     expect(query[0]["id"]).to eq(customer_one.id)
     expect(query[1]["id"]).to eq(customer_two.id)

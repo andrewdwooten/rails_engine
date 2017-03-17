@@ -1,7 +1,7 @@
-require 'rails_helper'
+require "rails_helper"
 
-describe 'Transaction API relationship endpoint' do
-  it 'returns invoice associated with a transaction' do
+describe "Transaction Relationship Endpoint" do
+  it "returns invoice associated with a transaction" do
     transaction = create(:transaction)
     # transaction.invoice = create(:invoice)
 
@@ -11,6 +11,6 @@ describe 'Transaction API relationship endpoint' do
 
     transaction_invoice = JSON.parse(response.body)
 
-    expect(transaction_invoice["status"]).to eq('Teststatus')
+    expect(transaction_invoice["status"]).to eq("Teststatus")
   end
 end

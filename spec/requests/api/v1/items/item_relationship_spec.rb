@@ -1,6 +1,6 @@
 require "rails_helper"
 
-describe "Items API" do
+describe "Items Relationship Endpoints" do
   it "returns a collection of associated invoice items" do
     item = create(:item)
     invoice = create(:invoice)
