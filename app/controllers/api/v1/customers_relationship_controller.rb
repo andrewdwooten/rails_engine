@@ -1,4 +1,5 @@
 class Api::V1::CustomersRelationshipController < ApplicationController
+
   def invoices
     render json: Customer.invoices(params)
   end
@@ -7,9 +8,4 @@ class Api::V1::CustomersRelationshipController < ApplicationController
     render json: Customer.transactions(params)
   end
 
-  private
-
-  def params
-
-  end
 end

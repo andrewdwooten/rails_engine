@@ -7,9 +7,4 @@ class Api::V1::ItemsRelationshipController < ApplicationController
     render json: Item.find(params[:id]).merchant
   end
 
-  private 
-
-  def params
-
-  end
 end

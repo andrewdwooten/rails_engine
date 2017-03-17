@@ -19,9 +19,4 @@ class Api::V1::InvoicesRelationshipController < ApplicationController
     render json: Invoice.find(params[:id]).merchant
   end
 
-  private
-
-  def params
-
-  end
 end

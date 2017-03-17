@@ -7,7 +7,9 @@ Rails.application.routes.draw do
         # Business Intelligence
           get "/merchants/most_items" => "merchants_business#most_items"
           get "/merchants/revenue" => "merchants_business#revenue_on_date"
-
+          get "/merchants/most_revenue" => "merchants_business#ranked_by_revenue"
+          get "/merchants/:id/favorite_customer" => "merchants_business#favorite_customer"
+          
         # Records
           get "/merchants/find" => "merchants#find"
           get "/merchants/find_all" => "merchants#find_all"
@@ -51,8 +53,8 @@ Rails.application.routes.draw do
           resources :customers, only: [:index, :show]
 
         # Relationships
-          get "/customers/:id/invoices" => "customers_relatioship#invoices"
-          get "customers/:id/transactions" => "customers_relatioship#transactions"
+          get "/customers/:id/invoices(.:format)" => "customers_relationship#invoices"
+          get "/customers/:id/transactions" => "customers_relationship#transactions"
 
 
       # Items

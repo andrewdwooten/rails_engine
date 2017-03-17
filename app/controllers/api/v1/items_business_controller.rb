@@ -3,9 +3,4 @@ class Api::V1::ItemsBusinessController < ApplicationController
     render json: Item.most_revenue(params[:quantity])
   end
 
-  private
-
-  def params
-
-  end
 end
