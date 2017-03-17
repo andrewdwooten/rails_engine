@@ -61,6 +61,7 @@ Rails.application.routes.draw do
       #-------#
         # Business Intelligence
           get "/items/most_revenue" => "items_business#most_revenue"
+          get "/items/most_items" => "items_business#most_items"
           get "/items/:id/best_day" => "items_business#best_day"
 
         # Records
