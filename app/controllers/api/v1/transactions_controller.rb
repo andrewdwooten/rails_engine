@@ -19,10 +19,6 @@ class Api::V1::TransactionsController < ApplicationController
     render json: Transaction.find_random
   end
 
-  def invoice
-    render json: Transaction.invoice(params)
-  end
-
   private
 
   def search_params

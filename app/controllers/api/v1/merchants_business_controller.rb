@@ -1,4 +1,8 @@
-class Api::V1::MerchantsbusinessController < ApplicationController
+class Api::V1::MerchantsBusinessController < ApplicationController
+
+  def most_items
+    render json: Merchant.most_items(params[:quantity])
+  end
 
   def revenue_on_date
     render json: {"total_revenue": Merchant.revenue_on_date(params[:date]).to_s}
@@ -11,4 +15,5 @@ class Api::V1::MerchantsbusinessController < ApplicationController
   def favorite_customer
     render json: Merchant.favorite_customer(params[:id])[0]
   end
+
 end

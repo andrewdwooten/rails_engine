@@ -1,17 +1,17 @@
 class ApplicationRecord < ActiveRecord::Base
   self.abstract_class = true
 
-    def self.search(params)
-      find_by(filter(params))
-    end
+  def self.search(params)
+    find_by(filter(params))
+  end
 
-    def self.search_all(params)
-      where(filter(params))
-    end
+  def self.search_all(params)
+    where(filter(params))
+  end
 
-    def self.find_random
-      order("Random()").limit(1)
-    end
+  def self.find_random
+    order("Random()").limit(1)
+  end
 
   def self.filter(params)
     case

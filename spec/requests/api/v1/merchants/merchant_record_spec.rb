@@ -1,6 +1,6 @@
-require 'rails_helper'
+require "rails_helper"
 
-describe "Merchant API" do
+describe "Merchant Record Endpoints" do
   it "displays all merchants" do
     create_list(:merchant, 8)
     get "/api/v1/merchants"
@@ -102,9 +102,11 @@ describe "Merchant API" do
 
 
     get "/api/v1/merchants/random"
+
     thing = JSON.parse(response.body)
-    #require 'pry'; binding.pry
+
     expect(response).to be_success
+    
     id = thing[0]["id"]
     merch = Merchant.find(id).id
     expect(thing[0]["id"]).to eq(merch)

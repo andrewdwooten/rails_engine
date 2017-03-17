@@ -1,6 +1,6 @@
-require 'rails_helper'
+require "rails_helper"
 
-describe "API Business endpoints for items" do
+describe "Item Business Intelligence" do
   it "API returns top (x)quantity items by revenue" do
     item_good = create(:item)
     item_bad = create(:item)
@@ -12,7 +12,7 @@ describe "API Business endpoints for items" do
     end
     Invoice.all.each {|invoice| create(:transaction,
                                         invoice_id: invoice.id,
-                                        result: 'success')}
+                                        result: "success")}
 
     get "/api/v1/items/most_revenue?quantity=2"
 
